@@ -10,7 +10,7 @@ module.exports.handler = (event, context, cb) => {
 
   const {filename, base64File} = JSON.parse(event.body);
 
-  return convertFileToPDF(base64File, filename)
+  return convertFileToPNG(base64File, filename)
     .then(pngFileUrl => {
       return cb(null, {body: JSON.stringify({pngFileURL})});
     })
