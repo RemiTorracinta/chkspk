@@ -1,0 +1,26 @@
+{
+  "name": "chkspk",
+  "version": "1.0.0",
+  "description": "serverless spectral viewer",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RemiTorracinta/chkspk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RemiTorracinta/chkspk/issues"
+  },
+  "homepage": "https://github.com/RemiTorracinta/chkspk#readme",
+  "devDependencies": {
+    "aws-sdk": "^2.156.0"
+  },
+  "dependencies": {
+    "lambda-audio": "^1.0.0"
+  }
+}

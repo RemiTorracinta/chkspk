@@ -7,7 +7,7 @@ provider:
 
 functions:
   hello:
-    handler: handler.hello
+    handler: service/handler.hello
 
     events:
       - http:
