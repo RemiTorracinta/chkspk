@@ -12,7 +12,7 @@ const s3 = new S3({region: 'us-east-1'});
  */
 function uploadPNG(filename, fileBuffer) {
   const options = {
-    Bucket: process.env.S3_BUCKET_NAME,
+    Bucket: process.env.BUCKET_NAME,
     Key: `tmp/PNG/${filename}`,
     Body: fileBuffer,
     ACL: 'public-read',

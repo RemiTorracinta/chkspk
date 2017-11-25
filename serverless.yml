@@ -7,6 +7,8 @@ provider:
 
 functions:
   convert:
+    environment:
+      BUCKET_NAME: uploads
     handler: convert/handler.handler
     events:
-      - s3: photos
+      - s3: uploads
