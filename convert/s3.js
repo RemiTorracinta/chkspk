@@ -1,4 +1,3 @@
-const {execSync} = require('child_process');
 const {S3} = require('aws-sdk');
 
 const s3 = new S3({region: 'us-east-1'});
@@ -12,7 +11,7 @@ const s3 = new S3({region: 'us-east-1'});
  */
 function uploadPNG(filename, fileBuffer) {
   const options = {
-    Bucket: process.env.BUCKET_NAME,
+    Bucket: process.env.bucket_name,
     Key: `tmp/PNG/${filename}`,
     Body: fileBuffer,
     ACL: 'public-read',

@@ -1,4 +1,3 @@
-const {execSync} = require('child_process');
 const {readFileSync} = require('fs');
 const lambdaAudio = require('lambda-audio');
 const path = require('path');
@@ -13,7 +12,7 @@ const message = "Created by SoX on chkspk.com"
 module.exports.convertToPNG = function convertToPNG(inputFilename) {
   console.log(`[convertToPNG][file:${inputFilename}]`);
   const PNGFilename = getPNGFilename(inputFilename);
-  const PNGFileBuffer;
+  var PNGFileBuffer;
   lambdaAudio.sox(["sox", inputFileName, "-n", "spectrogram",
                    "-c", message, "-o", PNGFilename])
   .then(response => {
@@ -26,9 +25,9 @@ module.exports.convertToPNG = function convertToPNG(inputFilename) {
     PNGFileName = PNGFileName + ".error";
   })
 
-
+  const constBuffer = PNGFileBuffer
   return {
-    PNGFileBuffer,
+    constBuffer,
     PNGFilename
   };
 };
